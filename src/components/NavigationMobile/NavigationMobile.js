@@ -8,14 +8,17 @@ function NavigationMobile(props) {
         <Link className='header__nav-link' to='/'>
           Home
         </Link>
+        <Link className='header__nav-link' to='/saved-articles'>
+          Saved articles
+        </Link>
         <button className='navigation__nav-button_dark' type='button'>
-            Elise
-            <img
-              className='navigation__logout-image_dark'
-              src={logoutLight}
-              alt='logout-button'
-            />
-          </button>
+          Elise
+          <img
+            className='navigation__logout-image_dark'
+            src={logoutLight}
+            alt='logout-button'
+          />
+        </button>
       </div>
     </div>
   );

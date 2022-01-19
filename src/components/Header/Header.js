@@ -12,7 +12,7 @@ function Header(props) {
         <Link className='header__nav-link' to='/'>
           Home
         </Link>
-        {/* <Link className='header__nav-link' to='/saved-articles'> Saved articles </Link> */}
+        <Link className='header__nav-link' to='/saved-articles'> Saved articles </Link>
         <button
           className='header__nav-button'
           type='button'
