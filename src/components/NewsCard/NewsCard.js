@@ -1,5 +1,4 @@
 function NewsCard(props) {
-  console.log(props);
   return (
     <div className='newsCard__container' key={props.card.id}>
       <img className='newsCard__image' src={props.card.src} alt='card' />

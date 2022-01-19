@@ -11,6 +11,7 @@ import Register from '../register/register';
 import InfoToolTip from '../InfoToolTip/InfoToolTip';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 import MobileMenu from '../MobileMenu/MobileMenu';
+import NavigationMobile from '../NavigationMobile/NavigationMobile';
 
 function App() {
   const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
@@ -72,7 +73,7 @@ function App() {
               isOpen={isMeneOpen}
               onClose={closeMenuPopup}
             />
-            <MobileMenu
+            <NavigationMobile
               isOpen={isMeneOpen}
               onLoginPopupClick={handleLoginPopup}
             />

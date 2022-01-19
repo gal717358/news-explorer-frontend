@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 
 function MobileMenu(props) {
   return (
-    // <div className={'mobile__container mobile_opened'}>
     <div className={`mobile__container ${props.isOpen && 'mobile_opened'}`}>
       <div className='mobile__nav'>
         <Link className='header__nav-link' to='/'>

@@ -2,3 +2,5 @@
 @import url('../blocks/navigation/__nav/__nav-button/navigation__nav-button.css');
 @import url('../blocks/navigation/__nav/__nav-link/navigation__nav-link.css');
 @import url('../blocks/navigation/__user-bar/navigation__user-bar.css');
+@import url('../blocks/navigation/__nav/__nav-button/_dark/navigation__nav-button_dark.css');
+@import url('../blocks/navigation/__logout-image/_dark/navigation__logout-image_dark.css');

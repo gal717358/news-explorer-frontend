@@ -1,0 +1,13 @@
+.mobile__nav_dark {
+    display: none;
+  }
+  
+  @media screen and (max-width: 580px) {
+    .mobile__nav_dark {
+      display: flex;
+      flex-direction: column;
+      padding: 60px 16px 24px;
+      gap: 22px;
+    }
+  }
+  
