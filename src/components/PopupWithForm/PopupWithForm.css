@@ -1,0 +1,11 @@
+@import url('../blocks/user-form/__container/user-form__container.css');
+@import url('../blocks/user-form/__fieldset/user-form__fieldset.css');
+@import url('../blocks/user-form/__title/user-form__title.css');
+@import url('../blocks/user-form/__input-label/user-form__input-label.css');
+@import url('../blocks/user-form/__input/user-form__input.css');
+@import url('../blocks/user-form/__submit-button/user-form__submit-button.css');
+@import url('../blocks/user-form/__switch/user-form__switch.css');
+@import url('../blocks/user-form/__switch/__switch-link/user-form__switch-link.css');
+@import url('../blocks/user-form/user-form.css');
+@import url('../blocks/user-form/_opened/user-form_opened.css');
+@import url('../blocks/user-form/__close-button/user-form__close-button.css');

@@ -1,0 +1,10 @@
+@import url('../blocks/newCardList/__container/newCardList__container.css');
+@import url('../blocks/newCardList/__title/newCardList__title.css');
+@import url('../blocks/newCardList/__button/newCardList__button.css');
+@import url('../blocks/newCardList/__cards/newCardList__cards.css');
+@import url('../blocks/newCardList/__save-article/newsCard__save-article.css');
+@import url('../blocks/newCardList/__save-article/_error/newsCard__save-article_error.css');
+@import url('../blocks/newCardList/__delete-article/newsCard__delete-article.css');
+@import url('../blocks/newCardList/__delete-article/_hover/newsCard__delete-article_hover.css');
+
+

@@ -1,0 +1,9 @@
+.header__nav-button_closed_dark{
+    background-image: url('../../../../../../../images/icons8-close.svg');
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    margin-right: 16px;
+    border: none;
+}

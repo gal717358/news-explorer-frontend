@@ -1,0 +1,21 @@
+.footer__social-icons {
+  display: flex;
+  align-items: center;
+  margin: 30px 106px;
+  gap: 28px;
+}
+
+@media screen and (max-width:768px) {
+  .footer__social-icons {
+    margin: 24px 40px 18px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width:580px) {
+  .footer__social-icons {
+    margin: 20px 16px;
+    align-items: flex-start;
+  }
+}

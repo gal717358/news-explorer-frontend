@@ -1,0 +1,26 @@
+.newsCard__title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1a1b22;
+  max-width: 352px;
+  margin: 12px 24px 0px;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width:768px) {
+  .newsCard__title {
+    font-size: 22px;
+    line-height: 24px;
+    max-width: 192px;
+  }
+}
+
+@media screen and (max-width:580px) {
+  .newsCard__title {
+    margin: 10px 16px 14px;
+    max-width: none;
+  }
+}

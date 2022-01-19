@@ -1,0 +1,7 @@
+.preloader {
+	display: flex;
+	flex-direction: column;
+	min-height: 282px;
+	background-color: #F5F6F7;
+	justify-content: center;
+}

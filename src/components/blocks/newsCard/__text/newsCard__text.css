@@ -1,0 +1,25 @@
+.newsCard__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1a1b22;
+  margin: 16px 24px 18px;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 768px) {
+  .newsCard__text {
+    margin: 12px 16px 10px;
+    text-align: left;
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .newsCard__text {
+    margin: 12px 16px 10px;
+    max-width: none;
+  }
+}

@@ -1,0 +1,32 @@
+.newsCard__delete-article {
+  background-image: url('../../../../images/trash-regular.svg');
+  height: 40px;
+  width: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  border: none;
+  top: 24px;
+  position: absolute;
+  right: 24px;
+  cursor: url('../../../../images/Hand-pointer.svg'), pointer;
+}
+.newsCard__delete-article:hover {
+  background-image: url('../../../../images/remove-icon.svg');
+}
+
+.newsCard__delete-article:hover + .newsCard__delete-article_hover {
+  display: block;
+  position: absolute;
+  right: 69px;
+  width: 142px;
+  top: 24px;
+  color: black;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+}

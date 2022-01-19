@@ -1,0 +1,9 @@
+.newsCard__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: url('../../../../images/Hand-pointer.svg'), pointer;
+  box-shadow: 1px 1px 1px 1px rgba(114, 114, 114, 0.158);
+  border-radius: 10px 10px 10px 10px;
+  background-color: white;
+}

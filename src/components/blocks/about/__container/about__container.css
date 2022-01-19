@@ -1,0 +1,12 @@
+.about__container{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+@media screen and (max-width: 580px) {
+    .about__container {
+       flex-direction: column;
+       margin: 0 auto;
+    }
+}

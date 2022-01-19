@@ -1,0 +1,21 @@
+.SearchForm__bar_input {
+  background: #ffffff;
+  box-sizing: border-box;
+  height: 61px;
+  width: 600px;
+  padding-left: 24px;
+  border-radius: 100px;
+  border-color: transparent;
+}
+
+.SearchForm__bar_input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 580px) {
+  .SearchForm__bar_input {
+    position: relative;
+    width: 100%;
+    margin: 0px;
+  }
+}

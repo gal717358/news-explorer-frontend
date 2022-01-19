@@ -1,0 +1,13 @@
+.SearchForm__bar {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 88px;
+}
+
+@media screen and (max-width: 580px) {
+  .SearchForm__bar {
+    display: flex;
+    flex-direction: column;
+    margin: 0 16px;
+  }
+}

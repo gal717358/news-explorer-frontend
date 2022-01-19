@@ -1,0 +1,7 @@
+@import url('../blocks/savedNewsHeader/savedNewsHeader.css');
+@import url('../blocks/savedNewsHeader/__container/savedNewsHeader__container.css');
+@import url('../blocks/savedNewsHeader/__title/savedNews__title.css');
+@import url('../blocks/savedNewsHeader/__info/savedNews__info.css');
+@import url('../blocks/savedNewsHeader/__keywords/savedNews__keywords.css');
+@import url('../blocks/savedNewsHeader/__keywords/_span/savedNews__keywords_span.css');
+

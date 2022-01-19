@@ -1,0 +1,46 @@
+.newsCard__save-article {
+  background-image: url('../../../../images/save-article-button.svg');
+  height: 40px;
+  width: 40px;
+  background-position: center;
+  background-repeat: none;
+  border-radius: 8px;
+  border: none;
+  top: 24px;
+  position: absolute;
+  right: 24px;
+  cursor: url('../../../../images/Hand-pointer.svg'), pointer;
+}
+
+.newsCard__save-article:hover {
+  background-image: url('../../../../images/bookmark-black.svg');
+  background-repeat: no-repeat;
+}
+
+.newsCard__save-article:focus {
+  background-image: url('../../../../images/bookmark-active.svg');
+  background-repeat: no-repeat;
+}
+
+.newsCard__save-article:hover + .newsCard__save-article_error {
+  display: block;
+  position: absolute;
+  right: 69px;
+  width: 142px;
+  top: 24px;
+  color: black;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .newsCard__save-article {
+    top: 8px;
+    right: 8px;
+  }
+}

@@ -1,0 +1,17 @@
+.header__nav-button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background-color: transparent;
+  padding: 10px 50px;
+  cursor: url('../../../../../images/Hand-pointer.svg'), pointer;
+}
+/* .header__nav_button:active {
+    border-bottom: 2px solid white;
+    padding-bottom: 40px;
+    } */

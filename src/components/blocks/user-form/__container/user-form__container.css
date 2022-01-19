@@ -1,0 +1,10 @@
+.user-form__container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding-bottom: 35px;
+    transition: visibility 0.5, opacity 0.1s, linear 0.1s;
+}

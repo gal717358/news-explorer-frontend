@@ -1,0 +1,18 @@
+.newsCard__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 0px 0px 10px 10px;
+  height: 260px;
+}
+
+@media screen and (max-width: 768px) {
+  .newsCard__description {
+    height: auto;
+  }
+}

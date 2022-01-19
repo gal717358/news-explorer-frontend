@@ -1,0 +1,25 @@
+.newCardList__title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1a1b22;
+  margin: 80px 0px 64px;
+}
+
+@media screen and (max-width: 768px) {
+  .newCardList__title {
+    font-size: 30px;
+    line-height: 34px;
+    width: 336px;
+    margin: 40px 0px 32px;
+  }
+}
+@media screen and (max-width:580px) {
+  .newCardList__title {
+    width: 288px;
+    margin: 32px 16px 58px;  
+  }
+}
+
