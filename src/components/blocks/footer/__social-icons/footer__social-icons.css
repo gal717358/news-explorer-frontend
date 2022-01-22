@@ -14,7 +14,7 @@
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   .footer__social-icons {
     margin: 20px 16px;
     align-items: flex-start;

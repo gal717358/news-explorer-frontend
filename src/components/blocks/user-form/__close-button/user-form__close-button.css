@@ -18,7 +18,7 @@
     transition: 0.3s;
     z-index: 0;
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
     .user-form__close-button {
         width: 24px;
         height: 24px;

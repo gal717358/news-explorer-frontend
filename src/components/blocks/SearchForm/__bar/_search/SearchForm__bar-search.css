@@ -21,7 +21,7 @@
     right: 0px;
   }
 }
-@media screen and (max-width:620px) {
+@media screen and (max-width:600px) {
   .SearchForm__bar-search {
     position: relative;
     margin: 16px 0px;

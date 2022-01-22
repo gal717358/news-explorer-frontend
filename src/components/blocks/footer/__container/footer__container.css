@@ -7,7 +7,7 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   .footer__container {
     display: flex;
     flex-direction: column;

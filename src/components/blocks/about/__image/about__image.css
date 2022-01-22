@@ -10,7 +10,7 @@
     }
   }
 
-  @media screen and (max-width:620px) {
+  @media screen and (max-width:600px) {
     .about__image {
         margin:32px auto 24px;
         max-width: 272px;

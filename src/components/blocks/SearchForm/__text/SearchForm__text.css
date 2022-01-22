@@ -14,7 +14,7 @@
     line-height: 24px;
   }
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   .SearchForm__text {
     margin: 0 16px;
   }

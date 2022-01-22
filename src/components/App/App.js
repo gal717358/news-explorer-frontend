@@ -27,9 +27,9 @@ function App() {
     setIsLoginPopupOpen(true);
   };
 
-  const handleToolTipPopup = () => {
-    setIsToolTipOpen(true);
-  };
+  // const handleToolTipPopup = () => {
+  //   setIsToolTipOpen(true);
+  // };
 
   const handleSwitchLoginPopup = () => {
     setIsLoginPopupOpen(false);

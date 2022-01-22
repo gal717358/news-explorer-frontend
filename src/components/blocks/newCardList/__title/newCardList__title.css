@@ -17,7 +17,7 @@
     max-width: 352px;
   }
 }
-@media screen and (max-width:620px) {
+@media screen and (max-width:600px) {
   .newCardList__title {
     height: 48px;
     margin: 10px 15px 14px;

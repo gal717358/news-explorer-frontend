@@ -9,7 +9,7 @@
   transition: visibility 0.5, opacity 0.1s, linear 0.1s;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   .user-form__container {
     bottom: 0;
     position: fixed;

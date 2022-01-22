@@ -8,7 +8,7 @@
     width: calc(100% - 40px * 2);
   }
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   .newCardList {
     width: calc(100% - 16px * 2);
   }

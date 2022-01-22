@@ -1,6 +1,6 @@
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   .mobile_opened {
-    max-width: 620px;
+    max-width: 600px;
     margin: auto;
     background-color: black;
     height: 250px;

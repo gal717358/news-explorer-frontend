@@ -4,7 +4,7 @@
   padding-top: 88px;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   .SearchForm__bar {
     display: flex;
     flex-direction: column;

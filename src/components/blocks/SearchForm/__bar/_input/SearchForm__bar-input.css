@@ -12,7 +12,7 @@
   outline: none;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   .SearchForm__bar-input {
     position: relative;
     width: 100%;

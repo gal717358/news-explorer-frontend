@@ -12,7 +12,7 @@
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   .navigation__nav {
     display: none;
   }

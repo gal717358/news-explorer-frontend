@@ -14,7 +14,7 @@
   justify-content: space-between;
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 600px) {
   .header {
     min-height: 66px;
   }
