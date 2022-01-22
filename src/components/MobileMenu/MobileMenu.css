@@ -1,3 +1,4 @@
 @import url('../blocks/mobile/__container/mobile__container.css');
 @import url('../blocks/mobile/__nav/mobile__nav.css');
 @import url('../blocks/mobile/_opened/mobile_opened');
+@import url('../blocks/mobile/__nav/_dark/mobile__nav_dark.css');

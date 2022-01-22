@@ -9,15 +9,12 @@
   cursor: url('../../../../../images/Hand-pointer.svg'), pointer;
 }
 
-.header__nav-link:focus {
-  border-bottom: 2px solid white;
-  color: white;
-  line-height: 75px;
-}
-
-@media screen and (max-width: 580px) {
-  .header__nav-link:focus {
+@media screen and (max-width: 768px) {
+  .header__nav-link {
     border: none;
     line-height:24px;
+    margin-right: 16px;
+
   }
 }
+

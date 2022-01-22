@@ -29,23 +29,23 @@ export const CardData = [
     tag:'Yellowstone'
   },
 
-  {
-    id: 3,
-    src: 'https://i.ibb.co/z2MmSnd/image-07.png',
-    date: 'November 4, 2020',
-    title: 'Grand Teton Renews Historic Crest Trail',
-    text: '“The linking together of the Cascade and Death Canyon trails, at their heads, took place on October 1, 1933, and marked the first step in the realization of a plan whereby the hiker will be...',
-    span: 'National parks traveler',
-    tag: 'Parks'
-  },
+  // {
+  //   id: 3,
+  //   src: 'https://i.ibb.co/z2MmSnd/image-07.png',
+  //   date: 'November 4, 2020',
+  //   title: 'Grand Teton Renews Historic Crest Trail',
+  //   text: '“The linking together of the Cascade and Death Canyon trails, at their heads, took place on October 1, 1933, and marked the first step in the realization of a plan whereby the hiker will be...',
+  //   span: 'National parks traveler',
+  //   tag: 'Parks'
+  // },
 
-  {
-    id: 4,
-    src: 'https://i.ibb.co/pP4PSjn/image-01.png',
-    date: 'March 16, 2020',
-    title: 'Scientists Dont Know Why Polaris Is So Weird ',
-    text: 'Humans have long relied on the starry sky to push into new frontiers, sail to the very edge of the world and find their way back home again. Even animals look to the stars to guide them. ',
-    span: 'treehugger',
-    tag: 'Photography'
-  },
+  // {
+  //   id: 4,
+  //   src: 'https://i.ibb.co/pP4PSjn/image-01.png',
+  //   date: 'March 16, 2020',
+  //   title: 'Scientists Dont Know Why Polaris Is So Weird ',
+  //   text: 'Humans have long relied on the starry sky to push into new frontiers, sail to the very edge of the world and find their way back home again. Even animals look to the stars to guide them. ',
+  //   span: 'treehugger',
+  //   tag: 'Photography'
+  // },
 ];

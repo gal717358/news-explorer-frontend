@@ -3,8 +3,9 @@
 @import url('../blocks/header/__logo/header__logo.css');
 @import url('../blocks/header/__nav/nav-button/header__nav-button.css');
 @import url('../blocks/header/__nav/nav-link/header__nav-link.css');
-@import url('../blocks/header/__nav/_mobile/header__nav_mobile-button.css');
-@import url('../blocks/header/__nav/_mobile/_closed/header__nav_mobile-button_closed.css');
-@import url('../blocks/header/__nav/_mobile/_open/header__nav_mobile-button_open.css');
-@import url('../blocks/header/__nav/_mobile/_dark/header__nav_mobile-button_dark.css');
+@import url('../blocks/header/__nav/_mobile/header__nav-mobile-button.css');
+@import url('../blocks/header/__nav/_mobile/_closed/header__nav-mobile-button_closed.css');
+@import url('../blocks/header/__nav/_mobile/_open/header__nav-mobile-button_open.css');
+@import url('../blocks/header/__nav/_mobile/_dark/header__nav-mobile-button_dark.css');
 @import url('../blocks/header/__nav/_mobile/_closed/_dark/header__nav-button_closed_dark.css');
+@import url('../blocks/header/__nav/nav-link/_active/header__nav-link_active.css');

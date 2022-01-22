@@ -1,0 +1,14 @@
+.navigation__logo {
+  margin: 0 104px;
+}
+
+@media screen and (max-width: 930px) {
+  .navigation__logo {
+    margin: 0 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navigation__logo {
+    margin: 0 16px;
+  }
+}

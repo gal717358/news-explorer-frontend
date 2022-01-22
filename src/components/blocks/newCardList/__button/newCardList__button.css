@@ -1,5 +1,5 @@
 .newCardList__button {
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -8,7 +8,7 @@
   cursor: url('../../../../images/Hand-pointer.svg'), pointer;
   background: #ffff;
   border-radius: 80px;
-  margin: 80px auto 64px;
+  margin: 0px auto 64px;
   border: none;
   padding: 15px 70px;
 }

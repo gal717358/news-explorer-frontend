@@ -8,11 +8,17 @@
   margin: 0px;
   padding: 0px;
   border-radius: 0px 0px 10px 10px;
-  height: 260px;
+  /* height: 320px; */
 }
 
 @media screen and (max-width: 768px) {
   .newsCard__description {
-    height: auto;
+    /* height:350px; */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .newsCard__description {
+    /* height:260px; */
   }
 }

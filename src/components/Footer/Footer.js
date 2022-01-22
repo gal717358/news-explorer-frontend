@@ -6,22 +6,34 @@ function Footer() {
     <div className='footer'>
       <div className='footer__container'>
         <div className='footer__links'>
-          <div className='footer__nav'>
-            <Link className='footer__link' to='/'>
-              Home
-            </Link>
-            <a href='https://practicum.yandex.com' className='footer__link'>
-              Practicum by Yandex
-            </a>
-          </div>
-          <div className='footer__social-icons'>
-            <a href='https://github.com/gal717358'>
-              <img src={githubIcon} alt='github-icon' />
-            </a>
-            <a href='https://www.facebook.com/gal.buzaglo.7'>
-              <img src={facebookIcon} alt='github-icon' />
-            </a>
-          </div>
+          <ul className='footer__nav'>
+            <li>
+              <Link className='footer__link' to='/'>
+                Home
+              </Link>
+            </li>
+            <li>
+              <a
+                href='https://practicum.yandex.com'
+                className='footer__link'
+                target='blank'
+              >
+                Practicum by Yandex
+              </a>
+            </li>
+          </ul>
+          <ul className='footer__social-icons'>
+            <li>
+              <a href='https://github.com/gal717358' target='blank'>
+                <img src={githubIcon} alt='github-icon' />
+              </a>
+            </li>
+            <li>
+              <a href='https://www.facebook.com/gal.buzaglo.7' target='blank'>
+                <img src={facebookIcon} alt='github-icon' />
+              </a>
+            </li>
+          </ul>
         </div>
         <p className='footer__copyright'>
           © 2021 News-explorer, Powered by Gal Buzaglo

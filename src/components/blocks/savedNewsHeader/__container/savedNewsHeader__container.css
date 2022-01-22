@@ -11,7 +11,7 @@
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
   .savedNewsHeader__container {
     margin: 0 16px;
   }

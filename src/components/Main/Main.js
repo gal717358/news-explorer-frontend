@@ -1,20 +1,19 @@
-import SearchForm from '../SearchForm/SearchForm';
 import NewCardList from '../NewsCardList/NewsCardList';
-import NewsCard from '../NewsCard/NewsCard';
 import About from '../About/About';
+import { useLocation } from 'react-router-dom';
 // import Preloader from '../Preloader/Preloader';
 // import NotFound from '../NotFound/NotFound';
 
-function Main(props) {
+function Main() {
+  const location = useLocation();
   return (
     <>
-      <SearchForm />
-      <NewCardList>
-        <NewsCard />
-      </NewCardList>
-      {/* <Preloader /> */}
-      {/* <NotFound />  */}
-      <About />
+      <main className='main'>
+        {/* <Preloader /> */}
+        {/* <NotFound />  */}
+        <NewCardList />
+        {location.pathname === '/' && <About />}
+      </main>
     </>
   );
 }
