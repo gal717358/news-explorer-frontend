@@ -2,18 +2,23 @@ import { Link } from 'react-router-dom';
 
 function MobileMenu(props) {
   return (
-    <div className={`mobile__container ${props.isOpen && 'mobile_opened'}`}>
-      <div className='mobile__nav'>
-        <Link className='header__nav-link' to='/'>
-          Home
-        </Link>
-        <button
-          className='header__nav-button'
-          type='button'
-          onClick={props.onLoginPopupClick}
-        >
-          Sign in
-        </button>
+    <div className='mobile'>
+      <div className={`mobile__container ${props.isOpen && 'mobile_opened'}`}>
+        <div className='mobile__nav'>
+          <Link className='header__nav-link' to='/'>
+            Home
+          </Link>
+          <Link className='header__nav-link' to='/saved-articles'>
+            Saved Articles
+          </Link>
+          <button
+            className='header__nav-button'
+            type='button'
+            onClick={props.onLoginPopupClick}
+          >
+            Sign in
+          </button>
+        </div>
       </div>
     </div>
   );

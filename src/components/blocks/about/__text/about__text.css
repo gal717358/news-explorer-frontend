@@ -1,5 +1,5 @@
 .about__text {
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -11,6 +11,6 @@
 @media screen and (max-width:768px) {
   .about__text {
     max-width: 424px;
-    margin:16px 40px 0px 0px;
+    /* margin:16px 40px 0px 0px; */
   }
 }

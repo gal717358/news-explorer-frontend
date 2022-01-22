@@ -5,9 +5,9 @@ function InfoToolTip(props) {
     <div className={`user-form ${props.isOpen && 'user-form_opened'} `}>
       <div className='user-form__container'>
         <fieldset className='user-form__fieldset'>
-          <h1 className='user-form__title'>
+          <h2 className='user-form__title'>
             Registration successfully completed!
-          </h1>
+          </h2>
           <button
             onClick={props.isClose}
             type='button'
@@ -15,7 +15,7 @@ function InfoToolTip(props) {
             aria-label='close button'
             name='close button'
           />
-          <Link to='/register' className='user-form__switch-link'>
+          <Link to='/register' className='user-form__switch-link' onClick={props.onLoginPopupClick}>
             Sign in
           </Link>
         </fieldset>

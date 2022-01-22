@@ -1,23 +1,22 @@
 .newCardList__cards {
-  display: grid;
-  grid-template-rows: repeat(1, minmax(576px, 1fr));
+  padding: 62px 0;
+  list-style: none;
+  display: flex;
   gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  list-style: none;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .newCardList__cards {
-    display: grid;
-    grid-template-rows: repeat(1, minmax(420px, 1fr));
+    padding: 32px 0;
     gap: 8px;
-    grid-template-columns: repeat(3, minmax(224px, 1fr));
   }
 }
-@media screen and (max-width:580px) {
+
+@media screen and (max-width: 620px) {
   .newCardList__cards {
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(440px, 1fr));
+    padding: 0 0 15px;
     gap: 10px;
-    grid-template-columns: repeat(1, minmax(288px, 1fr));
+    flex-wrap: wrap;
   }
 }

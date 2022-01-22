@@ -22,14 +22,14 @@
   background-repeat: no-repeat;
 }
 
-.newsCard__save-article:hover + .newsCard__save-article_error {
+.newsCard__save-article:hover + .newsCard__save-article_type_error {
   display: block;
   position: absolute;
   right: 69px;
   width: 142px;
   top: 24px;
   color: black;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 600;
   font-size: 12px;

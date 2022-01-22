@@ -13,8 +13,11 @@
   align-items: center;
   justify-content: space-between;
 }
-@media screen and (max-width: 580px) {
+
+@media screen and (max-width: 620px) {
   .header {
     min-height: 66px;
   }
 }
+
+

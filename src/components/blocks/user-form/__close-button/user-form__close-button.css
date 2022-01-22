@@ -18,10 +18,11 @@
     transition: 0.3s;
     z-index: 0;
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 620px) {
     .user-form__close-button {
-        right: 5px;
-        height: 26px;
-        width: 26px;
+        width: 24px;
+        height: 24px;
+        top: -41px;
+        right: 15px;
     }
 }

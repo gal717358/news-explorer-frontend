@@ -2,16 +2,17 @@
     display: flex;
     margin:0 104px;
     align-items: center;
+    list-style: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 930px) {
     .header__nav {
        min-height: 66px;
        margin: 0 40px;
     }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 620px) {
     .header__nav {
        display: none;
     }

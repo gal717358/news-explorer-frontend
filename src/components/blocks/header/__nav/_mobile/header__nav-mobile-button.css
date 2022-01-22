@@ -1,4 +1,4 @@
-.header__nav_mobile-button {
+.header__nav-mobile-button {
   background-image: url('../../../../../images/menu-mobile.svg');
   background-size: 100%;
   color: white;
@@ -10,8 +10,8 @@
   display: none;
 }
 
-@media screen and (max-width: 580px) {
-  .header__nav_mobile-button {
+@media screen and (max-width: 620px) {
+  .header__nav-mobile-button {
     display: block;
   }
 }

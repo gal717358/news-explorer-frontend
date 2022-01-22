@@ -3,7 +3,7 @@ function SavedNewsHeader() {
     <div className='savedNewsHeader'>
       <div className='savedNewsHeader__container'>
         <p className='savedNews__title'>Saved articles</p>
-        <h1 className='savedNews__info'>Elise, you have 5 saved articles</h1>
+        <h1 className='savedNews__info'>Gal, you have 5 saved articles</h1>
         <p className='savedNews__keywords'>
           By keywords:
           <span className='savedNews__keywords_span'>

@@ -17,7 +17,7 @@ function PopupWithForm(props) {
         />
         <form name={`${props.formName}`} /*onSubmit={props.onSubmit}*/>
           <fieldset className='user-form__fieldset'>
-            <h1 className='user-form__title'>{`${props.title}`}</h1>
+            <h2 className='user-form__title'>{`${props.title}`}</h2>
             {props.children}
             <button
               className='user-form__submit-button'
