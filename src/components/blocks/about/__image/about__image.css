@@ -2,6 +2,14 @@
     margin: 80px 104px 0px 80px;
 }
 
+@media screen and (max-width:980px) {
+    .about__image {
+        margin: 61px 40px 32px 61px;
+        max-width: 285px;
+        max-height: 285px;
+    }
+  }
+
 @media screen and (max-width:768px) {
     .about__image {
         margin: 61px 40px 32px 61px;

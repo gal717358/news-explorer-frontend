@@ -5,10 +5,19 @@
   list-style: none;
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1200px) {
   .navigation__nav {
     min-height: 66px;
     margin: 0 40px;
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .navigation__nav {
+    min-height: 66px;
+    margin: 0 16px;
+    padding: 0px;
   }
 }
 

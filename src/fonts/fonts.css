@@ -11,25 +11,25 @@
     font-weight:500;
 }
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     src: url(./roboto-400-regular.woff);
     src: url(./roboto-400-regular.woff2);
     font-weight:400;
 }
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     src: url(./roboto-500.woff);
     src: url(./roboto-500.woff2);
     font-weight:500;
 }
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     src: url(./roboto-700.woff);
     src: url(./roboto-700.woff2);
     font-weight:700;
 }
 @font-face {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     src: url(./roboto-900.woff);
     src: url(./roboto-900.woff2);
     font-weight:900;

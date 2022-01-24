@@ -5,14 +5,14 @@ function MobileMenu(props) {
     <div className='mobile'>
       <div className={`mobile__container ${props.isOpen && 'mobile_opened'}`}>
         <div className='mobile__nav'>
-          <Link className='header__nav-link' to='/'>
+          <Link className='mobile__nav-link' to='/'>
             Home
           </Link>
-          <Link className='header__nav-link' to='/saved-articles'>
+          <Link className='mobile__nav-link' to='/saved-articles'>
             Saved Articles
           </Link>
           <button
-            className='header__nav-button'
+            className='mobile__nav-button'
             type='button'
             onClick={props.onLoginPopupClick}
           >
