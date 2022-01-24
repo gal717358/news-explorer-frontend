@@ -3,12 +3,12 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .newCardList {
     width: calc(100% - 40px * 2);
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
   .newCardList {
     width: calc(100% - 16px * 2);
   }

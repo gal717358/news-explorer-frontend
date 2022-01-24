@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
 import Login from '../Login/Login';
@@ -12,12 +12,30 @@ import PopupWithForm from '../PopupWithForm/PopupWithForm';
 import MobileMenu from '../MobileMenu/MobileMenu';
 import NavigationMobile from '../NavigationMobile/NavigationMobile';
 import SearchForm from '../SearchForm/SearchForm';
+import newsApi from '../../utils/NewsApi';
 
 function App() {
+  const history = useHistory();
   const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
   const [isRegisterPopupOpen, setIsRegisterPopupOpen] = useState(false);
   const [isToolTipOpen, setIsToolTipOpen] = useState(false);
   const [isMeneOpen, setIsMeneOpen] = useState(false);
+  const [articles, setArticles] = useState([]);
+  const [values, setValues] = useState({
+    email: '',
+    password: '',
+  });
+
+  useEffect(() => {
+    newsApi.getArticles().then((data) => {
+      setArticles(data.articles);
+    });
+  }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
 
   const handleMenuPopup = () => {
     setIsMeneOpen(true);
@@ -95,18 +113,21 @@ function App() {
             <SearchForm />
           </Route>
         </Switch>
-        <Main />
+        <Main articles={articles} />
         <Footer />
 
         <Login
+          // loginSubmit={handleSubmitLogin}
           isOpen={isLoginPopupOpen}
           isClose={closeAllPopups}
           onSwitchClick={handleSwitchLoginPopup}
+          handleChange={handleChange}
         />
         <Register
           isOpen={isRegisterPopupOpen}
           isClose={closeAllPopups}
           onSwitchClick={handleSwitchRegisterPopup}
+          handleChange={handleChange}
         />
 
         <InfoToolTip

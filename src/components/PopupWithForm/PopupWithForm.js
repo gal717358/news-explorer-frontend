@@ -1,5 +1,3 @@
-// import { Link } from 'react-router-dom';
-
 function PopupWithForm(props) {
   return (
     <div
@@ -15,13 +13,13 @@ function PopupWithForm(props) {
           aria-label='close button'
           name='close button'
         />
-        <form name={`${props.formName}`} /*onSubmit={props.onSubmit}*/>
+        <form name={`${props.formName}`} onSubmit={props.onSubmit}>
           <fieldset className='user-form__fieldset'>
             <h2 className='user-form__title'>{`${props.title}`}</h2>
             {props.children}
             <button
               className='user-form__submit-button'
-              type='button'
+              type='submit'
               name='submit-button'
             >
               {`${props.buttonTitle}`}

@@ -15,12 +15,13 @@ function Register(props) {
       <input
         className='user-form__input'
         type='text'
-        name='Email'
+        name='email'
         id='email-register'
         placeholder='Enter email'
         minLength={2}
         maxLength={30}
         required
+        onChange={props.handleChange}
       />
       <label className='user-form__input-label'>Password</label>
       <input
@@ -32,17 +33,19 @@ function Register(props) {
         minLength={2}
         maxLength={30}
         required
+        onChange={props.handleChange}
       />
       <label className='user-form__input-label'>Username</label>
       <input
         className='user-form__input'
         type='text'
-        name='Username'
-        id='Username-register'
+        name='username'
+        id='username-register'
         placeholder='Enter username'
         minLength={2}
         maxLength={30}
         required
+        onChange={props.handleChange}
       />
     </PopupWithForm>
   );

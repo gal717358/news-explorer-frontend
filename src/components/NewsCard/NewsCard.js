@@ -4,8 +4,8 @@ function NewsCard(props) {
   const location = useLocation();
 
   return (
-      <li className='newsCard__container' key={props.card.id}>
-        <img className='newsCard__image' src={props.card.src} alt='card' />
+      <li className='newsCard__container' key={props.key}>
+        <img className='newsCard__image' src={props.card.urlToImage} alt='card' />
         {location.pathname === '/saved-articles' && (
           <>
             <button type='button' className='newsCard__delete-article'></button>
@@ -13,7 +13,7 @@ function NewsCard(props) {
               <p>Remove from saved</p>
             </div>
             <div className='newsCard__image-tag'>
-              <p>{props.card.tag}</p>
+              <p>{props.card.source.name}</p>
             </div>
           </>
         )}
@@ -27,10 +27,10 @@ function NewsCard(props) {
         )}
 
         <div className='newsCard__description'>
-          <span className='newsCard__date'>{props.card.date}</span>
+          <span className='newsCard__date'>{props.card.publishedAt}</span>
           <h2 className='newsCard__title'>{props.card.title}</h2>
-          <p className='newsCard__text'>{props.card.text}</p>
-          <cite className='newsCard__source'>{props.card.span}</cite>
+          <p className='newsCard__text'>{props.card.description}</p>
+          <cite className='newsCard__source'>{props.card.source.name}</cite>
         </div>
       </li>
   );

@@ -12,3 +12,11 @@
   background-color: white;
   text-align: center;
 }
+
+@media screen and (max-width: 1100px) {
+  .newsCard__image-tag {
+    left: 16px;
+    top: 16px;
+    padding:0px 8px;
+  }
+}

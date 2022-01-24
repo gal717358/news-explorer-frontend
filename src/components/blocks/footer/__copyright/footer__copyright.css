@@ -8,7 +8,7 @@
   margin: 32px 104px 26px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .footer__copyright {
     margin: 24px 40px 18px;
   }
