@@ -4,7 +4,7 @@ function NewsCard(props) {
   const location = useLocation();
 
   return (
-      <li className='newsCard__container' key={props.key}>
+      <li className='newsCard__container' >
         <img className='newsCard__image' src={props.card.urlToImage} alt='card' />
         {location.pathname === '/saved-articles' && (
           <>

@@ -18,7 +18,7 @@ function Login(props) {
         type='text'
         name='email'
         id='email-login'
-        placeholder='Enter email'
+        placeholder='Enter email' 
         minLength={2}
         maxLength={30}
         required

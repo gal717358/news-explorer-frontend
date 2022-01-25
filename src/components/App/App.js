@@ -20,17 +20,41 @@ function App() {
   const [isRegisterPopupOpen, setIsRegisterPopupOpen] = useState(false);
   const [isToolTipOpen, setIsToolTipOpen] = useState(false);
   const [isMeneOpen, setIsMeneOpen] = useState(false);
-  const [articles, setArticles] = useState([]);
+  const [articles, setArticles] = useState(null);
+  const [searchInput, setSearchInput] = useState('');
+  const [searchQuery, setSearchQuery] = useState('bitcoin');
+  const [searchError, setSearchError] = useState('');
+  const [totalResults, setTotalResults]= useState([]);
+  const [preloader, setPreloader] = useState(false);
+  const [dataError, setDataError] = useState('');
   const [values, setValues] = useState({
     email: '',
     password: '',
   });
 
+  const handleSearchChange = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    setSearchQuery(searchInput);
+    setPreloader(true)
+  };
+
   useEffect(() => {
-    newsApi.getArticles().then((data) => {
+    if (searchQuery === '') {
+      return setSearchError('Please enter a keyword');
+    } else setSearchError('');
+    newsApi.getArticles(searchQuery).then((data) => {
+      setTotalResults(data.totalResults)
       setArticles(data.articles);
-    });
-  }, []);
+      setPreloader(true)
+    })
+    .catch((err) => {
+      setDataError(err.message)
+    })
+  }, [searchError, searchQuery]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -110,12 +134,16 @@ function App() {
               isOpen={isMeneOpen}
               onLoginPopupClick={handleLoginPopup}
             />
-            <SearchForm />
+            <SearchForm
+              onSearch={handleSearchChange}
+              searchInput={searchInput}
+              onClick={handleSearchSubmit}
+              searchError={searchError}
+            />
           </Route>
         </Switch>
-        <Main articles={articles} />
+        <Main articles={articles} searchQuery={searchQuery} preloader={preloader} totalResults={totalResults} dataError={dataError}/>
         <Footer />
-
         <Login
           // loginSubmit={handleSubmitLogin}
           isOpen={isLoginPopupOpen}
@@ -135,7 +163,6 @@ function App() {
           isClose={closeAllPopups}
           onLoginPopupClick={handleSwitchTooltipPopup}
         />
-
         <PopupWithForm onClose={closeAllPopups} />
       </div>
     </div>

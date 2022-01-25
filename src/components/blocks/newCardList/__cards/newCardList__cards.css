@@ -4,7 +4,10 @@
   display: flex;
   gap: 16px;
   list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 
 @media screen and (max-width: 768px) {
   .newCardList__cards {

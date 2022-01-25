@@ -4,3 +4,4 @@
 @import url('../blocks/SearchForm/__bar/SearchForm__bar.css');
 @import url('../blocks/SearchForm/__bar/_search/SearchForm__bar-search.css');
 @import url('../blocks/SearchForm/__bar/_input/SearchForm__bar-input.css');
+@import url('../blocks/SearchForm/__bar/_input/searchForm__bar-input-error.css');

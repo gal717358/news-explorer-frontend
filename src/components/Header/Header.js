@@ -49,9 +49,9 @@ function Header(props) {
       ></button>
       <button
         type='button'
-        className={`'header__nav-button_closed' ${
+        className={`'header__nav-mobile-button_closed' ${
           props.isOpen
-            ? 'header__nav-button_closed'
+            ? 'header__nav-mobile-button_closed'
             : 'header__nav-mobile-button_open'
         }`}
         onClick={props.onClose}
