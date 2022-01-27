@@ -1,0 +1,17 @@
+.header__nav-mobile-button {
+  background-image: url('../../../../../images/menu-mobile.svg');
+  background-size: 100%;
+  color: white;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+  margin: 16px;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .header__nav-mobile-button {
+    display: block;
+  }
+}

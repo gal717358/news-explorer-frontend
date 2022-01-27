@@ -1,0 +1,18 @@
+.newsCard__container {
+  width: 400px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 16px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .newsCard__container {
+    width: 224px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .newsCard__container {
+    width: 100%;
+  }
+}

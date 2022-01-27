@@ -1,0 +1,24 @@
+.footer__nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0px;
+}
+
+@media screen and (max-width:768px) {
+  .footer__nav {
+    gap: 20px;
+    margin: 0 16px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .footer__nav {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    margin:20px 16px;
+
+  }
+}

@@ -1,0 +1,22 @@
+.navigation__nav-button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: black;
+  background-color: transparent;
+  padding: 10px 20px;
+  cursor: url('../../../../../images/Hand-pointer.svg'), pointer;
+  border: 1px solid #d1d2d6;
+  box-sizing: border-box;
+  border-radius: 100px;
+  gap: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation__nav-button {
+    gap: 5px;
+  }
+}

@@ -1,0 +1,39 @@
+.newsCard__title {
+  font-family: 'Roboto Slab';
+  font-weight: 500;
+  font-size: 26px;
+  height: 60px;
+  line-height: 1.15;
+  margin: 0 24px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  max-width: 352px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  color: black;
+}
+
+@media screen and (max-width:768px) {
+  .newsCard__title {
+    font-size: 22px;
+    line-height: 1.15;
+    height: 72px;
+    margin: 10px 15px;
+    max-width: 352px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .newsCard__title {
+    height: 48px;
+    margin: 10px 15px 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}

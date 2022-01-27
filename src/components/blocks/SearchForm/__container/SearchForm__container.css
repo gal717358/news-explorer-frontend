@@ -1,0 +1,11 @@
+.SearchForm__container {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../../../../images/SearchForm-background.png');
+  height: 576px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-self: center;
+}
