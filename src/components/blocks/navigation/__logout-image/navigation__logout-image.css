@@ -1,4 +1,5 @@
 .navigation__logout-image {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
+  cursor: url('../../../../images/Hand-pointer.svg'), pointer;
 }

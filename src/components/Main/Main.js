@@ -17,11 +17,17 @@ function Main(props) {
               articles={props.articles}
               preloader={props.preloader}
               dataError={props.dataError}
+              isLoggedIn={props.isLoggedIn}
+              onSaveCard={props.onSaveCard}
+              savedArticles={props.savedArticles}
+              onDeleteCard={props.onDeleteCard}
+              onRegisterPopupClick={props.onRegisterPopupClick}
             />
           )
         ) : (
           <Preloader />
         )}
+        {}
         {location.pathname === '/' && <About />}
       </main>
     </>

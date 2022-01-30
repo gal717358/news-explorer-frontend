@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../images/NewsExplorer-black.svg';
 import logout from '../../images/logout-button.svg';
+import { CurrentUserContext } from '../contexts/CurrentUserContext.js';
 
 function Navigation(props) {
   const location = useLocation();
+  const currentUser = useContext(CurrentUserContext);
 
   return (
     <div className='navigation'>
@@ -28,16 +30,15 @@ function Navigation(props) {
           </Link>
         </li>
         <li>
-          <div className='navigation__user-bar'>
-            <button className='navigation__nav-button' type='button'>
-              Elise
-              <img
-                className='navigation__logout-image'
-                src={logout}
-                alt='logout-button'
-              />
-            </button>
-          </div>
+          <button className='navigation__nav-button' type='button'>
+            {currentUser.name}
+            <img
+              className='navigation__logout-image'
+              src={logout}
+              alt='logout-button'
+              onClick={props.logout}
+            />
+          </button>
         </li>
       </ul>
       <button

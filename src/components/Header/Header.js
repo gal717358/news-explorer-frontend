@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../images/NewsExplorer.svg';
+import logout from '../../images/logout.png';
+import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 
 function Header(props) {
+  const currentUser = useContext(CurrentUserContext);
+
   const location = useLocation();
   return (
     <header className='header'>
@@ -22,20 +26,28 @@ function Header(props) {
             Home
           </Link>
         </li>
+        {props.isLoggedIn ? <li> <Link className='header__nav-link' to='/saved-articles'>
+            Saved articles
+          </Link> </li> : ''}
+          
         <li>
-          <Link className='header__nav-link' to='/saved-articles'>
-            {' '}
-            Saved articles{' '}
-          </Link>
-        </li>
-        <li>
-          <button
+        {props.isLoggedIn ?
+            <button className='header__nav-button_light' type='button'>
+              {currentUser.name}
+              <img
+                className='header__logout-image'
+                src={logout}
+                alt='logout-button'
+                onClick={props.logout}
+              />
+            </button>: <button
             className='header__nav-button'
             type='button'
             onClick={props.onLoginPopupClick}
           >
             Sign in
-          </button>
+          </button>}
+          
         </li>
       </ul>
       <button
