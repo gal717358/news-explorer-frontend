@@ -34,7 +34,6 @@ function App() {
   const [isToken, setIsToken] = useState(localStorage.getItem('token'));
   const [currentUser, setCurrentUser] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [isSaved, setIsSaved] = useState([]);
   const [values, setValues] = useState({
     email: '',
     password: '',

@@ -28,7 +28,7 @@ function Login(props) {
   };
 
   useEffect(() => {
-    if(Object.keys(errors).length === 0 && isSubmitted){
+    if (Object.keys(errors).length === 0 && isSubmitted) {
       props.onSubmit();
     }
   }, [errors, isSubmitted, props]);
