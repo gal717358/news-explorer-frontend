@@ -1,5 +1,12 @@
 import { ARTICLES_URL, API_KEY, SEARCH_TIME, PROXY_URL } from './constants';
 
+const handleResponse = (res) => {
+  if (res.ok) {
+    return res.json();
+  }
+  return Promise.reject(`${res.status}: ${res.statusText}`);
+};
+
 class NewsApi {
   constructor(options) {
     this.apiKey = options.apiKey;
@@ -10,9 +17,7 @@ class NewsApi {
   getArticles(searchQuery) {
     return fetch(
       `${PROXY_URL}/v2/everything?q=${searchQuery}&from=${this.lastWeek.toISOString()}&to=${this.currentDay.toISOString()}&sortBy=popularity&pageSize=100&apiKey=${API_KEY}`,
-    ).then((res) => {
-      return res.json();
-    });
+    ).then((res) => handleResponse(res));
   }
 }
 

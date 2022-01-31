@@ -7,7 +7,7 @@ import { Route, Switch, useHistory } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
 import Login from '../Login/Login';
-import Register from '../register/register';
+import Register from '../Register/Register';
 import InfoToolTip from '../InfoToolTip/InfoToolTip';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 import MobileMenu from '../MobileMenu/MobileMenu';
@@ -16,6 +16,7 @@ import SearchForm from '../SearchForm/SearchForm';
 import newsApi from '../../utils/NewsApi';
 import * as mainApi from '../../utils/MainApi';
 import ProtectedRoute from '../ProtectedRoute';
+import SavedNews from '../SavedNews/SavedNews';
 
 function App() {
   const history = useHistory();
@@ -26,7 +27,7 @@ function App() {
   const [articles, setArticles] = useState(null);
   const [savedArticles, setSavedArticles] = useState({});
   const [searchInput, setSearchInput] = useState('');
-  const [searchQuery, setSearchQuery] = useState('bitcoin');
+  const [searchQuery, setSearchQuery] = useState('');
   const [searchError, setSearchError] = useState('');
   const [totalResults, setTotalResults] = useState([]);
   const [preloader, setPreloader] = useState(false);
@@ -91,7 +92,7 @@ function App() {
     if (isToken) {
       mainApi
         .checkToken(isToken)
-        .then((res) => {
+        .then(() => {
           setIsToken(isToken);
           setIsLoggedIn(true);
           history.push('/');
@@ -125,12 +126,39 @@ function App() {
       .then((data) => {
         setTotalResults(data.totalResults);
         setArticles(data.articles);
+        data.articles.map((cardObj) => (cardObj.saved = 'false'));
         setPreloader(true);
       })
       .catch((err) => {
         setDataError(err.message);
       });
   }, [searchError, searchQuery]);
+
+  //saveArticle
+  const handleSaveArticle = (card) => {
+    if (isLoggedIn) {
+      if (card.owner === currentUser._id || card.saved === 'true') {
+        if (card.saved === 'true') {
+          const savedFound = savedArticles.find((f) => f.title === card.title);
+          handleDeleteArticle(savedFound);
+        } else {
+          handleDeleteArticle(card);
+        }
+      } else {
+        mainApi
+          .saveArticle(isToken, card, searchQuery)
+          .then((newArticle) => {
+            setSavedArticles([...savedArticles, newArticle]);
+            setArticles((state) =>
+              state.map((c) =>
+                c.title === card.title ? { ...c, saved: 'true' } : c,
+              ),
+            );
+          })
+          .catch((err) => console.log(err));
+      }
+    }
+  };
 
   //getUserArticles
   useEffect(() => {
@@ -144,26 +172,19 @@ function App() {
     }
   }, [isToken]);
 
-  //saveArticle
-  const handleSaveArticle = (card) => {
-    if (isLoggedIn) {
-      mainApi
-        .saveArticle(isToken, card, searchQuery)
-        .then((newArticle) => {
-          setSavedArticles([...savedArticles, newArticle]);
-          setArticles((state) =>
-            state.map((c) => (c.title === card.title ? { ...c } : c)),
-          );
-        })
-        .catch((err) => console.log(err));
-    }
-  };
   //deleteArticle
   const handleDeleteArticle = (card) => {
     mainApi
       .deleteArticle(isToken, card._id)
       .then(() => {
-        setSavedArticles(savedArticles.filter((c) => c._id !== card._id));
+        setSavedArticles((articles) =>
+          articles.filter((c) => c._id !== card._id),
+        );
+        setArticles((articles) =>
+          articles.map((item) =>
+            item.title === card.title ? { ...item, saved: 'false' } : item,
+          ),
+        );
       })
       .catch((err) => {
         console.log(err);
@@ -269,6 +290,18 @@ function App() {
               />
               <NavigationMobile isOpen={isMeneOpen} logout={handleLogOut} />
               <SavedNewsHeader savedArticles={savedArticles} />
+              <SavedNews
+                articles={articles}
+                preloader={preloader}
+                totalResults={totalResults}
+                dataError={dataError}
+                isLoggedIn={isLoggedIn}
+                onSaveCard={handleSaveArticle}
+                savedArticles={savedArticles}
+                onDeleteCard={handleDeleteArticle}
+                onRegisterPopupClick={handleRegisterPopup}
+                searchQuery={searchQuery}
+              />
             </ProtectedRoute>
 
             <Route path='/'>
@@ -293,19 +326,20 @@ function App() {
                 onClick={handleSearchSubmit}
                 searchError={searchError}
               />
+              <Main
+                articles={articles}
+                preloader={preloader}
+                totalResults={totalResults}
+                dataError={dataError}
+                isLoggedIn={isLoggedIn}
+                onSaveCard={handleSaveArticle}
+                savedArticles={savedArticles}
+                onDeleteCard={handleDeleteArticle}
+                onRegisterPopupClick={handleRegisterPopup}
+                searchQuery={searchQuery}
+              />
             </Route>
           </Switch>
-          <Main
-            articles={articles}
-            preloader={preloader}
-            totalResults={totalResults}
-            dataError={dataError}
-            isLoggedIn={isLoggedIn}
-            onSaveCard={handleSaveArticle}
-            savedArticles={savedArticles}
-            onDeleteCard={handleDeleteArticle}
-            onRegisterPopupClick={handleRegisterPopup}
-          />
           <Footer />
           <Login
             isOpen={isLoginPopupOpen}

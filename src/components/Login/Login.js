@@ -6,7 +6,7 @@ function Login(props) {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const validate = () => {
-    let errors = {};
+    const errors = {};
     if (!props.values.email) {
       errors.email = 'Email address is required';
     } else if (!/\S+@\S+\.\S+/.test(props.values.email)) {

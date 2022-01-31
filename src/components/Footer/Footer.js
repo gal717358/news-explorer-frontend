@@ -36,7 +36,7 @@ function Footer() {
           </ul>
         </div>
         <p className='footer__copyright'>
-          © 2021 News-explorer, Powered by Gal Buzaglo
+          © {new Date().getFullYear()} News-explorer, Powered by Gal Buzaglo
         </p>
       </div>
     </div>

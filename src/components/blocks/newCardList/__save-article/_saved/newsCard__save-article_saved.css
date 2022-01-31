@@ -1,0 +1,22 @@
+.newsCard__save-article_saved {
+    background-image: url('../../../../../images/bookmark-active.svg');
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-repeat: none;
+    border-radius: 8px;
+    border: none;
+    top: 24px;
+    position: absolute;
+    right: 24px;
+    cursor: url('../../../../../images/Hand-pointer.svg'), pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .newsCard__save-article_saved {
+      top: 8px;
+      right: 8px;
+    }
+  }
+  

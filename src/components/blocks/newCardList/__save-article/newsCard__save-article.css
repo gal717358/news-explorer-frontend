@@ -12,16 +12,6 @@
   cursor: url('../../../../images/Hand-pointer.svg'), pointer;
 }
 
-.newsCard__save-article:hover {
-  background-image: url('../../../../images/bookmark-black.svg');
-  background-repeat: no-repeat;
-}
-
-.newsCard__save-article:focus {
-  background-image: url('../../../../images/bookmark-active.svg');
-  background-repeat: no-repeat;
-}
-
 .newsCard__save-article:hover + .newsCard__save-article_type_error {
   display: block;
   position: absolute;

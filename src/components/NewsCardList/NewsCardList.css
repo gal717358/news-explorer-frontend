@@ -7,5 +7,6 @@
 @import url('../blocks/newCardList/__delete-article/newsCard__delete-article.css');
 @import url('../blocks/newCardList/__delete-article/_hover/newsCard__delete-article_hover.css');
 @import url('../blocks/newCardList/newCardList.css');
+@import url('../blocks/newCardList/__save-article/_saved/newsCard__save-article_saved.css');
 
 

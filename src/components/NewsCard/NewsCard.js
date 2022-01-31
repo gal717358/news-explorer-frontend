@@ -2,6 +2,7 @@ import { useLocation } from 'react-router-dom';
 
 function NewsCard(props) {
   const location = useLocation();
+  
   const { isLoggedIn, card } = props;
 
   const handleDeleteArticle = () => {
@@ -36,7 +37,7 @@ function NewsCard(props) {
         <>
           <button
             type='button'
-            className='newsCard__save-article'
+            className={`newsCard__save-article ${card.saved === 'true' ? 'newsCard__save-article_saved' : 'newsCard__save-article'} `}
             onClick={!isLoggedIn ? props.onRegisterPopupClick : handleSaveArticle}
           ></button>
           {isLoggedIn ? (

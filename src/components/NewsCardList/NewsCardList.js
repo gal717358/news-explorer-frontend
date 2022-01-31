@@ -47,26 +47,7 @@ function NewCardList(props) {
           </ul>
         )}
 
-        {location.pathname === '/saved-articles' && (
-          <ul className='newCardList__cards'>
-            {props.savedArticles.slice(0, visible).map((data) => (
-              <NewsCard
-                key={data._id}
-                card={data}
-                isLoggedIn={props.isLoggedIn}
-                onSaveCard={props.onSaveCard}
-                savedArticles={props.savedArticles}
-                onDeleteCard={props.onDeleteCard}
-                onRegisterPopupClick={props.onRegisterPopupClick}
-              />
-            ))}
-          </ul>
-        )}
-
-        {visible <
-        (location.pathname === '/saved-articles'
-          ? props.savedArticles.length
-          : 100) ? (
+        {visible < 100 ? (
           <button
             className='newCardList__button'
             type='button'

@@ -1,5 +1,4 @@
 export const BASE_URL = 'https://api.gal.buzaglo.students.nomoreparties.sbs';
-// export const BASE_URL = 'https://api.gal.buzaglo.students.nomoreparties.sbs';
 
 const handleResponse = (res) => {
   if (res.ok) {
@@ -55,9 +54,7 @@ export const getUserInfo = (token) => {
       'Content-Type': 'application/json',
       authorization: `Bearer ${token}`,
     },
-  }).then((res) => {
-    return res.json();
-  });
+  }).then((res) => handleResponse(res));
 };
 
 export const getUserArticles = (token) => {
@@ -89,12 +86,12 @@ export const saveArticle = (token, data, searchQuery) => {
   }).then((res) => handleResponse(res));
 };
 
-export const deleteArticle = (isToken, articleId) =>{
+export const deleteArticle = (isToken, articleId) => {
   return fetch(`${BASE_URL}/articles/${articleId}`, {
-    method:'DELETE',
+    method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${isToken}`,
     },
   }).then((res) => handleResponse(res));
-}
+};
