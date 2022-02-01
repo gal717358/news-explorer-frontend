@@ -1,0 +1,27 @@
+.about__image{
+    margin: 80px 104px 0px 80px;
+}
+
+@media screen and (max-width:980px) {
+    .about__image {
+        margin: 61px 40px 32px 61px;
+        max-width: 285px;
+        max-height: 285px;
+    }
+  }
+
+@media screen and (max-width:768px) {
+    .about__image {
+        margin: 61px 40px 32px 61px;
+        max-width: 232px;
+        max-height: 232px;
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    .about__image {
+        margin:32px auto 24px;
+        max-width: 272px;
+        max-height: 272px;
+    }
+  }

@@ -1,0 +1,21 @@
+.header__nav-button_light{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        color: white;
+        background-color: transparent;
+        padding: 10px 20px;
+        border: 1px solid #d1d2d6;
+        box-sizing: border-box;
+        border-radius: 100px;
+        gap: 15px;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .header__nav-button_light {
+          gap: 5px;
+        }
+      }

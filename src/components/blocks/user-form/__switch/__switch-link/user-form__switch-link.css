@@ -1,0 +1,9 @@
+.user-form__switch-link {
+  margin-left: 3px;
+  text-decoration: none;
+  color: rgb(51, 109, 235);
+  border: none;
+  background-color: transparent;
+  cursor: url('../../../../../images/Hand-pointer.svg'), pointer;
+  margin-bottom: 28px;
+}
