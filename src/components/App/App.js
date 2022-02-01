@@ -45,6 +45,8 @@ function App() {
     e.preventDefault();
     if (localStorage.getItem('token')) {
       localStorage.removeItem('token');
+      localStorage.removeItem('savedArticles');
+      localStorage.removeItem('searchQuery');
       setIsLoggedIn(false);
     }
   };
@@ -95,6 +97,13 @@ function App() {
         .then(() => {
           setIsToken(isToken);
           setIsLoggedIn(true);
+          const cardsRecovered = JSON.parse(
+            localStorage.getItem('savedArticles'),
+          );
+          if (cardsRecovered) {
+            setArticles(cardsRecovered);
+            setSearchQuery(localStorage.getItem('searchQuery'));
+          }
           history.push('/');
         })
         .catch((err) => {
@@ -126,13 +135,16 @@ function App() {
       .then((data) => {
         setTotalResults(data.totalResults);
         setArticles(data.articles);
+        localStorage.setItem('savedArticles', JSON.stringify(savedArticles));
+        localStorage.setItem('searchQuery', searchQuery);
         data.articles.map((cardObj) => (cardObj.saved = 'false'));
         setPreloader(true);
       })
       .catch((err) => {
         setDataError(err.message);
       });
-  }, [searchError, searchQuery]);
+  }, [savedArticles, searchError, searchQuery]);
+
 
   //saveArticle
   const handleSaveArticle = (card) => {
@@ -180,7 +192,7 @@ function App() {
         setSavedArticles((articles) =>
           articles.filter((c) => c._id !== card._id),
         );
-        setArticles((articles) =>
+        setSavedArticles((articles) =>
           articles.map((item) =>
             item.title === card.title ? { ...item, saved: 'false' } : item,
           ),
