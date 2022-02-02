@@ -9,11 +9,7 @@ function Main(props) {
   return (
     <>
       <main className='main'>
-        {location.pathname === '/' && !props.articles ? '' : (
-           (props.articles ? (
-            props.searchQuery === '' || props.totalResults === 0 ? (
-              <NotFound />
-            ) : (
+      {location.pathname === '/' && props.articles ?  props.articles.length === 0 ? '' : (
               <NewCardList
                 articles={props.articles}
                 preloader={props.preloader}
@@ -23,14 +19,11 @@ function Main(props) {
                 savedArticles={props.savedArticles}
                 onDeleteCard={props.onDeleteCard}
                 onRegisterPopupClick={props.onRegisterPopupClick}
-              />
-            )
-          ) : (
-            <Preloader />
-          ))
-        )
+              /> 
+            ) : <Preloader />
          }
-        {}
+         {props.totalResults === 0 && <NotFound /> }
+
         {location.pathname === '/' && <About />}
       </main>
     </>
